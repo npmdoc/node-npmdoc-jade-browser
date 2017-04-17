@@ -1,0 +1,782 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >jade-browser (v0.0.14)</a>
+</h1>
+<h4>express/connect middleware that serves jade compiled templates to the browser</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser">module jade-browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.jade-browser">
+            function <span class="apidocSignatureSpan"></span>jade-browser
+            <span class="apidocSignatureSpan">(exportPath, patterns, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.expose">
+            function <span class="apidocSignatureSpan">jade-browser.</span>expose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.toString">
+            function <span class="apidocSignatureSpan">jade-browser.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jade-browser.</span>expose.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jade-browser.</span>render</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jade-browser.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.expose">module jade-browser.expose</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.expose.expose">
+            function <span class="apidocSignatureSpan">jade-browser.</span>expose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.expose.prototype">module jade-browser.expose.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.expose.prototype.expose">
+            function <span class="apidocSignatureSpan">jade-browser.expose.prototype.</span>expose
+            <span class="apidocSignatureSpan">(obj, namespace, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.expose.prototype.exposed">
+            function <span class="apidocSignatureSpan">jade-browser.expose.prototype.</span>exposed
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.render">module jade-browser.render</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.render.render">
+            function <span class="apidocSignatureSpan">jade-browser.</span>render
+            <span class="apidocSignatureSpan">(ns)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.toString">module jade-browser.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.toString.toString">
+            function <span class="apidocSignatureSpan">jade-browser.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.utils">module jade-browser.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.utils.dirname">
+            function <span class="apidocSignatureSpan">jade-browser.utils.</span>dirname
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.utils.merge">
+            function <span class="apidocSignatureSpan">jade-browser.utils.</span>merge
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.utils.normalize">
+            function <span class="apidocSignatureSpan">jade-browser.utils.</span>normalize
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.utils.toRegExp">
+            function <span class="apidocSignatureSpan">jade-browser.utils.</span>toRegExp
+            <span class="apidocSignatureSpan">(str, begin, end)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser" id="apidoc.module.jade-browser">module jade-browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.jade-browser" id="apidoc.element.jade-browser.jade-browser">
+        function <span class="apidocSignatureSpan"></span>jade-browser
+        <span class="apidocSignatureSpan">(exportPath, patterns, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jade-browser = function (exportPath, patterns, options){
+  var options = options || {}
+    , ext = options.ext || &#x27;jade&#x27;
+    , namespace = options.namespace || &#x27;jade&#x27;
+    , built = false
+    , noCache = options.noCache || false
+    , debug = options.debug || false
+    , minify = options.minify || false
+    , maxAge = options.maxAge || 86400
+    , exportPath = exportPath.replace(/\/$/,&#x27;&#x27;)
+    , root = path.normalize(options.root ? options.root.replace(/\/$/,&#x27;&#x27;) : __dirname)
+    , regexp = utils.toRegExp(exportPath, true)
+    , headers = {
+          &#x27;Cache-Control&#x27;: &#x27;public, max-age=&#x27; + maxAge
+        , &#x27;Content-Type&#x27;: &#x27;text/javascript&#x27;
+      };
+
+  return function(req, res, next){
+    if (!req.url.match(regexp)) {
+       return next();
+    }
+
+    if (built &#x26;&#x26; !noCache) {
+      res.writeHead(200, headers);
+      res.end(built);
+    } else {
+
+      if (typeof patterns == &#x27;string&#x27;) {
+        patterns = [patterns];
+      }
+
+      var files = [];
+      patterns.forEach(function(pattern) {
+        pattern = path.join(root, pattern);
+        try {
+          var matches = glob.sync(pattern);
+          matches = matches.filter(function(match) {
+            return match.match(ext + &#x27;$&#x27;);
+          });
+          files = files.concat(matches);
+        } catch(e) {}
+      });
+
+      async.map(files, getTemplate, expose);
+
+      function getTemplate(filename, cb) {
+
+        fs.readFile(filename, &#x27;utf8&#x27;, function(err, content){
+          if (err) {
+            return cb(err);
+          }
+
+          var tmpl = jade.compile(content, {
+              filename: filename
+            , inline: false
+            , compileDebug: false
+            , client: true
+          });
+
+          if (typeof tmpl == &#x27;function&#x27;) {
+            var fn = &#x27;var jade=window.&#x27; + namespace + &#x27;; return anonymous(locals);&#x27;+ tmpl.toString();
+            fn = new Function(&#x27;locals&#x27;, fn);
+
+            cb(null, {
+                filename: filename
+              , fn: fn
+            });
+          } else {
+            cb(new Error(&#x27;Failed to compile&#x27;));
+          }
+
+        });
+      }
+
+      function expose(e, results) {
+        var templates = {}, filename;
+        results.forEach(function(template) {
+          filename = path.relative(root, template.filename);
+          templates[filename] = template.fn;
+        });
+
+        var code = jade.runtime.escape.toString() +&#x27;;&#x27;
+        code += jade.runtime.attrs.toString().replace(/exports\./g, &#x27;&#x27;) + &#x27;;&#x27;
+        code += &#x27; return attrs(obj);&#x27;
+
+        var payload = new Expose();
+        payload.expose({
+            attrs: new Function(&#x27;obj&#x27;, code)
+          , escape: jade.runtime.escape
+          , dirname: utils.dirname
+          , normalize: utils.normalize
+          , render: render(namespace)
+          , templates: templates
+        }, namespace, &#x27;output&#x27;);
+
+        built = payload.exposed(&#x27;output&#x27;);
+
+        if (minify) {
+          var code = parser.parse(built);
+          code = compiler.ast_mangle(code);
+          code = compiler.ast_squeeze(code);
+          built = compiler.gen_code(code);
+        }
+
+        res.writeHead(200, headers);
+        res.end(built);
+      }
+
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.expose" id="apidoc.element.jade-browser.expose">
+        function <span class="apidocSignatureSpan">jade-browser.</span>expose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Expose(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+var code = jade.runtime.escape.toString() +&#x27;;&#x27;
+code += jade.runtime.attrs.toString().replace(/exports\./g, &#x27;&#x27;) + &#x27;;&#x27;
+code += &#x27; return attrs(obj);&#x27;
+
+var payload = new Expose();
+payload.<span class="apidocCodeKeywordSpan">expose</span>({
+    attrs: new Function(&#x27;obj&#x27;, code)
+  , escape: jade.runtime.escape
+  , dirname: utils.dirname
+  , normalize: utils.normalize
+  , render: render(namespace)
+  , templates: templates
+}, namespace, &#x27;output&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.toString" id="apidoc.element.jade-browser.toString">
+        function <span class="apidocSignatureSpan">jade-browser.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    filename: filename
+  , inline: false
+  , compileDebug: false
+  , client: true
+});
+
+if (typeof tmpl == &#x27;function&#x27;) {
+  var fn = &#x27;var jade=window.&#x27; + namespace + &#x27;; return anonymous(locals);&#x27;+ tmpl.<span class="apidocCodeKeywordSpan
+">toString</span>();
+  fn = new Function(&#x27;locals&#x27;, fn);
+
+  cb(null, {
+      filename: filename
+    , fn: fn
+  });
+} else {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser.expose" id="apidoc.module.jade-browser.expose">module jade-browser.expose</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.expose.expose" id="apidoc.element.jade-browser.expose.expose">
+        function <span class="apidocSignatureSpan">jade-browser.</span>expose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Expose(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+var code = jade.runtime.escape.toString() +&#x27;;&#x27;
+code += jade.runtime.attrs.toString().replace(/exports\./g, &#x27;&#x27;) + &#x27;;&#x27;
+code += &#x27; return attrs(obj);&#x27;
+
+var payload = new Expose();
+payload.<span class="apidocCodeKeywordSpan">expose</span>({
+    attrs: new Function(&#x27;obj&#x27;, code)
+  , escape: jade.runtime.escape
+  , dirname: utils.dirname
+  , normalize: utils.normalize
+  , render: render(namespace)
+  , templates: templates
+}, namespace, &#x27;output&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser.expose.prototype" id="apidoc.module.jade-browser.expose.prototype">module jade-browser.expose.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.expose.prototype.expose" id="apidoc.element.jade-browser.expose.prototype.expose">
+        function <span class="apidocSignatureSpan">jade-browser.expose.prototype.</span>expose
+        <span class="apidocSignatureSpan">(obj, namespace, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expose = function (obj, namespace, name){
+  var app = this.app || this;
+
+  app._exposed = app._exposed || {};
+
+  // support second arg as name
+  // when a string or function is given
+  if (&#x27;string&#x27; == typeof obj || &#x27;function&#x27; == typeof obj) {
+    name = namespace || name;
+  } else {
+    name = name || name;
+    namespace = namespace || namespace;
+  }
+
+  // buffer string
+  if (&#x27;string&#x27; == typeof obj) {
+    this.js = this.js || {};
+    var buf = this.js[name] = this.js[name] || [];
+    buf.push(obj);
+  // buffer function
+  } else if (&#x27;function&#x27; == typeof obj &#x26;&#x26; obj.name) {
+    this.expose(obj.toString(), name);
+  // buffer self-calling function
+  } else if (&#x27;function&#x27; == typeof obj) {
+    this.expose(&#x27;;(&#x27; + obj + &#x27;)();&#x27;, name);
+  // buffer module object
+  } else if (this._require) {
+    obj = &#x27;module.exports = &#x27; + renderString(obj);
+    this.expose(renderRegister(namespace, obj), name);
+  // buffer object
+  } else {
+    this.expose(renderNamespace(namespace), name);
+    this.expose(renderObject(obj, namespace), name);
+    this.expose(&#x27;\n&#x27;);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+var code = jade.runtime.escape.toString() +&#x27;;&#x27;
+code += jade.runtime.attrs.toString().replace(/exports\./g, &#x27;&#x27;) + &#x27;;&#x27;
+code += &#x27; return attrs(obj);&#x27;
+
+var payload = new Expose();
+payload.<span class="apidocCodeKeywordSpan">expose</span>({
+    attrs: new Function(&#x27;obj&#x27;, code)
+  , escape: jade.runtime.escape
+  , dirname: utils.dirname
+  , normalize: utils.normalize
+  , render: render(namespace)
+  , templates: templates
+}, namespace, &#x27;output&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.expose.prototype.exposed" id="apidoc.element.jade-browser.expose.prototype.exposed">
+        function <span class="apidocSignatureSpan">jade-browser.expose.prototype.</span>exposed
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exposed = function (name){
+  name = name || exports.name;
+  this.js = this.js || {};
+  return this.js[name]
+    ? this.js[name].join(&#x27;\n&#x27;)
+    : &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  , escape: jade.runtime.escape
+  , dirname: utils.dirname
+  , normalize: utils.normalize
+  , render: render(namespace)
+  , templates: templates
+}, namespace, &#x27;output&#x27;);
+
+built = payload.<span class="apidocCodeKeywordSpan">exposed</span>(&#x27;output&#x27;);
+
+if (minify) {
+  var code = parser.parse(built);
+  code = compiler.ast_mangle(code);
+  code = compiler.ast_squeeze(code);
+  built = compiler.gen_code(code);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser.render" id="apidoc.module.jade-browser.render">module jade-browser.render</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.render.render" id="apidoc.element.jade-browser.render.render">
+        function <span class="apidocSignatureSpan">jade-browser.</span>render
+        <span class="apidocSignatureSpan">(ns)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (ns){
+  var fn = &#x27;var ns= &#x27;+ns+&#x27;; return render(template, options); &#x27;+ render.toString();
+  return new Function(&#x27;template&#x27;,&#x27;options&#x27;, fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - `minify`    Minifies the output (default: false)
+  - `maxAge`    Time in seconds to cache the results (default: 86400)
+  - `noCache`   Recompiles the output on every request (default: false)
+
+### Browser
+
+```javascript
+jade.<span class="apidocCodeKeywordSpan">render</span>(&#x27;path/to/template&#x27;, { values: for_template });
+```
+
+For direct access (for templates that have no need for partials).
+
+```javascript
+jade.templates[&#x27;path/to/template.jade&#x27;](locals);
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser.toString" id="apidoc.module.jade-browser.toString">module jade-browser.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.toString.toString" id="apidoc.element.jade-browser.toString.toString">
+        function <span class="apidocSignatureSpan">jade-browser.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    filename: filename
+  , inline: false
+  , compileDebug: false
+  , client: true
+});
+
+if (typeof tmpl == &#x27;function&#x27;) {
+  var fn = &#x27;var jade=window.&#x27; + namespace + &#x27;; return anonymous(locals);&#x27;+ tmpl.<span class="apidocCodeKeywordSpan
+">toString</span>();
+  fn = new Function(&#x27;locals&#x27;, fn);
+
+  cb(null, {
+      filename: filename
+    , fn: fn
+  });
+} else {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jade-browser.utils" id="apidoc.module.jade-browser.utils">module jade-browser.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.utils.dirname" id="apidoc.element.jade-browser.utils.dirname">
+        function <span class="apidocSignatureSpan">jade-browser.utils.</span>dirname
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dirname = function (path){
+  var dir = /^([\s\S]+\/(?!$)|\/)?((?:[\s\S]+?)?(\.[^.]*)?)$/.exec(path)[1] || &#x27;&#x27;;
+  if (!dir || dir.length === 1) return &#x27;&#x27;;
+  else return dir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (a &#x26;&#x26; b) { for (var key in b) { a[key] = (typeof a[key] == &#x27;undefined&#x27;) ? b[key] : a[key]; } }
+      return a;
+    })(opts || {}, options);
+
+  if(!path.match(/\.jade$/)) path += &#x27;.jade&#x27;;
+  path = ns.normalize(path);
+
+  if(!ns.templates[path]) path = ns.normalize(ns.<span class="apidocCodeKeywordSpan">dirname</span>(template) + path);
+  return ns.render(path, opts);
+}
+return ns.templates[template](options);
+}
+
+exports.render = function(ns){
+var fn = &#x27;var ns= &#x27;+ns+&#x27;; return render(template, options); &#x27;+ render.toString();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.utils.merge" id="apidoc.element.jade-browser.utils.merge">
+        function <span class="apidocSignatureSpan">jade-browser.utils.</span>merge
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(a, b){
+  if (a &#x26;&#x26; b) {
+    for (var key in b) {
+      a[key] = b[key];
+    }
+  }
+  return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.utils.normalize" id="apidoc.element.jade-browser.utils.normalize">
+        function <span class="apidocSignatureSpan">jade-browser.utils.</span>normalize
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function (path) {
+  var isAbsolute = path.charAt(0) === &#x27;/&#x27;,
+      trailingSlash = path.slice(-1) === &#x27;/&#x27;;
+
+  function normalizeArray(parts, allowAboveRoot) {
+    // if the path tries to go above the root, `up` ends up &#x3e; 0
+    var up = 0;
+    for (var i = parts.length-1; i &#x3e;= 0; i--) {
+      var last = parts[i];
+      if (last == &#x27;.&#x27;) {
+        parts.splice(i, 1);
+      } else if (last === &#x27;..&#x27;) {
+        parts.splice(i, 1);
+        up++;
+      } else if (up) {
+        parts.splice(i, 1);
+        up--;
+      }
+    }
+    // if the path is allowed to go above the root, restore leading ..s
+    if (allowAboveRoot) {
+      for (; up--; up) {
+        parts.unshift(&#x27;..&#x27;);
+      }
+    }
+    return parts;
+  }
+
+  // Normalize the path
+  path = normalizeArray(path.split(&#x27;/&#x27;).filter(function(p) {
+    return !!p;
+  })).join(&#x27;/&#x27;);
+
+  if (!path &#x26;&#x26; !isAbsolute) path = &#x27;.&#x27;;
+  if (path &#x26;&#x26; trailingSlash) path += &#x27;/&#x27;;
+
+  return (isAbsolute ? &#x27;/&#x27; : &#x27;&#x27;) + path;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  , namespace = options.namespace || &#x27;jade&#x27;
+  , built = false
+  , noCache = options.noCache || false
+  , debug = options.debug || false
+  , minify = options.minify || false
+  , maxAge = options.maxAge || 86400
+  , exportPath = exportPath.replace(/\/$/,&#x27;&#x27;)
+  , root = path.<span class="apidocCodeKeywordSpan">normalize</span>(options.root ? options.root.replace(/\/$/,&#x27;&#x27;) : __dirname
+)
+  , regexp = utils.toRegExp(exportPath, true)
+  , headers = {
+        &#x27;Cache-Control&#x27;: &#x27;public, max-age=&#x27; + maxAge
+      , &#x27;Content-Type&#x27;: &#x27;text/javascript&#x27;
+    };
+
+return function(req, res, next){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jade-browser.utils.toRegExp" id="apidoc.element.jade-browser.utils.toRegExp">
+        function <span class="apidocSignatureSpan">jade-browser.utils.</span>toRegExp
+        <span class="apidocSignatureSpan">(str, begin, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toRegExp(str, begin, end){
+   return ((begin) ? &#x27;^&#x27; : &#x27;&#x27;) +
+    str.replace(/([-.*+?^${}()|[\]\/\\])/g, &#x27;\\$1&#x27;) +
+    ((end) ? &#x27;$&#x27; : &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  , built = false
+  , noCache = options.noCache || false
+  , debug = options.debug || false
+  , minify = options.minify || false
+  , maxAge = options.maxAge || 86400
+  , exportPath = exportPath.replace(/\/$/,&#x27;&#x27;)
+  , root = path.normalize(options.root ? options.root.replace(/\/$/,&#x27;&#x27;) : __dirname)
+  , regexp = utils.<span class="apidocCodeKeywordSpan">toRegExp</span>(exportPath, true)
+  , headers = {
+        &#x27;Cache-Control&#x27;: &#x27;public, max-age=&#x27; + maxAge
+      , &#x27;Content-Type&#x27;: &#x27;text/javascript&#x27;
+    };
+
+return function(req, res, next){
+  if (!req.url.match(regexp)) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
