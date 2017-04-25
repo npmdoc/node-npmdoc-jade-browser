@@ -1,6 +1,6 @@
 # npmdoc-jade-browser
 
-#### api documentation for  jade-browser (v0.0.14)  [![npm package](https://img.shields.io/npm/v/npmdoc-jade-browser.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jade-browser) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jade-browser.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jade-browser)
+#### basic api documentation for  jade-browser (v0.0.14)  [![npm package](https://img.shields.io/npm/v/npmdoc-jade-browser.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jade-browser) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jade-browser.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jade-browser)
 
 #### express/connect middleware that serves jade compiled templates to the browser
 
@@ -68,7 +68,8 @@
     "scripts": {
         "test": "mocha test"
     },
-    "version": "0.0.14"
+    "version": "0.0.14",
+    "bin": {}
 }
 ```
 
