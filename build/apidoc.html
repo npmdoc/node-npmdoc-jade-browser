@@ -79,15 +79,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.toString">
-            function <span class="apidocSignatureSpan">jade-browser.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jade-browser.</span>expose.prototype</span>
 
         </li>
@@ -148,19 +139,6 @@
             <a class="apidocElementLiA" href="#apidoc.element.jade-browser.render.render">
             function <span class="apidocSignatureSpan">jade-browser.</span>render
             <span class="apidocSignatureSpan">(ns)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jade-browser.toString">module jade-browser.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jade-browser.toString.toString">
-            function <span class="apidocSignatureSpan">jade-browser.</span>toString
-            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -365,38 +343,6 @@ payload.<span class="apidocCodeKeywordSpan">expose</span>({
 
 
 
-    <h2>
-        <a href="#apidoc.element.jade-browser.toString" id="apidoc.element.jade-browser.toString">
-        function <span class="apidocSignatureSpan">jade-browser.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    filename: filename
-  , inline: false
-  , compileDebug: false
-  , client: true
-});
-
-if (typeof tmpl == &#x27;function&#x27;) {
-  var fn = &#x27;var jade=window.&#x27; + namespace + &#x27;; return anonymous(locals);&#x27;+ tmpl.<span class="apidocCodeKeywordSpan
-">toString</span>();
-  fn = new Function(&#x27;locals&#x27;, fn);
-
-  cb(null, {
-      filename: filename
-    , fn: fn
-  });
-} else {
-...</pre></li>
-    </ul>
-
-
-
 
 
 
@@ -575,41 +521,6 @@ For direct access (for templates that have no need for partials).
 ```javascript
 jade.templates[&#x27;path/to/template.jade&#x27;](locals);
 ```
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jade-browser.toString" id="apidoc.module.jade-browser.toString">module jade-browser.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jade-browser.toString.toString" id="apidoc.element.jade-browser.toString.toString">
-        function <span class="apidocSignatureSpan">jade-browser.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    filename: filename
-  , inline: false
-  , compileDebug: false
-  , client: true
-});
-
-if (typeof tmpl == &#x27;function&#x27;) {
-  var fn = &#x27;var jade=window.&#x27; + namespace + &#x27;; return anonymous(locals);&#x27;+ tmpl.<span class="apidocCodeKeywordSpan
-">toString</span>();
-  fn = new Function(&#x27;locals&#x27;, fn);
-
-  cb(null, {
-      filename: filename
-    , fn: fn
-  });
-} else {
 ...</pre></li>
     </ul>
 
